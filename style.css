@@ -25,14 +25,22 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'StarJedi', sans-serif; /* Futurista para SW */
-    background:
-    radial-gradient(circle at 50% 20%, rgba(255,0,0,0.2), transparent 40%),
-    radial-gradient(2px 2px at 20px 30px, white, transparent),
-    radial-gradient(2px 2px at 40px 70px, white, transparent),
-    #000000;
+    font-family: 'StarJedi', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+
+    background-size: cover;
+    background-position: center;
+    animation: fondo 75s infinite;
+}
+
+@keyframes fondo {
+    0%   { background-image: url('img/5.jpg'); }
+    20%  { background-image: url('img/6.jpg'); }
+    40%  { background-image: url('img/7.jpg'); }
+    60%  { background-image: url('img/8.jpg'); }
+    80%  { background-image: url('img/9.jpg'); }
+    100% { background-image: url('img/5.jpg'); }
 }
 
 /* Layout responsive */
@@ -44,7 +52,7 @@ body {
 .hero {
     text-align: center;
     padding: 50px 20px;
-    background: linear-gradient(to bottom, #000000, #1a1a1a), url('https://source.unsplash.com/featured/?galaxy') no-repeat center/cover; /* Gradiente galáctico */
+    background: rgba(0, 0, 0, 0.6);/* Gradiente galáctico */
     min-height: 60vh;
     display: flex;
     flex-direction: column;
@@ -264,4 +272,18 @@ button:hover {
     .gallery img {
         width: 150px;
     }
+}
+
+.colores-img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px; /* 👈 controla el recorte */
+    object-fit: cover; /* 👈 recorta automáticamente */
+    object-position: center; /* 👈 centra la imagen */
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

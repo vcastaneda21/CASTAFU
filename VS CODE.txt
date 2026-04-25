@@ -1,0 +1,18 @@
+VS CODE 
+
+
+
+🔁 A partir de ahora (flujo correcto)
+
+Cada vez que cambies algo en Visual Studio Code:
+
+git add .
+git commit -m "cambio que hiciste"
+git push
+⚠️ Para no volver a tener problemas
+
+Antes de trabajar:
+
+git pull
+
+👉 Así evitas conflictos futuros.
