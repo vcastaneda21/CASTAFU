@@ -277,13 +277,19 @@ button:hover {
 .colores-img {
     width: 100%;
     max-width: 300px;
-    height: 300px; /* 👈 controla el recorte */
-    object-fit: cover; /* 👈 recorta automáticamente */
-    object-position: center; /* 👈 centra la imagen */
+    height: 300px;
+    object-fit: cover;
     margin-top: 10px;
     border-radius: 10px;
     border: 2px solid #FFD700;
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* 👇 SOLO PARA CELULAR */
+@media (max-width: 768px) {
+    .colores-img {
+        height: auto;
+    }
 }
