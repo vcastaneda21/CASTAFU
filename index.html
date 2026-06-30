@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda - Made & Victor</title>
     <style>
-        /* Importar fuentes gratis */
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cormorant+Libre:wght@400;700&family=Montserrat:wght@300;400&display=swap');
 
-        /* Reset y base */
         * {
             margin: 0;
             padding: 0;
@@ -18,12 +16,10 @@
         body {
             font-family: 'Montserrat', sans-serif;
             color: #333;
-            background-color: #FAF9F6; /* Marfil */
+            background-color: #FAF9F6;
             line-height: 1.6;
-            overflow-x: hidden; /* Evitar scroll horizontal */
+            overflow-x: hidden;
         }
-
-        /* Layout responsive */
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -32,7 +28,7 @@
         .hero {
             text-align: center;
             padding: 50px 20px;
-            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(250,249,246,1)), url('https://source.unsplash.com/featured/?wedding') no-repeat center/cover;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.8), rgba(250,249,246,1));
             min-height: 60vh;
             display: flex;
             flex-direction: column;
@@ -43,10 +39,7 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 0; left: 0; right: 0; bottom: 0;
             background: rgba(0,0,0,0.1);
             animation: pulse 4s infinite;
         }
@@ -57,24 +50,22 @@
         .hero h1 {
             font-family: 'Playfair Display', serif;
             font-size: 3rem;
-            color: #D4AF37; /* Dorado suave */
+            color: #D4AF37;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
         .hero p {
             font-family: 'Cormorant Libre', serif;
             font-size: 1.5rem;
-            color: #6B705C; /* Verde oliva */
+            color: #6B705C;
         }
         .countdown {
             font-size: 2rem;
             margin: 20px 0;
-            color: #B0B7BF; /* Azul grisáceo */
+            color: #B0B7BF;
             font-weight: bold;
             animation: bounce 2s infinite;
         }
-
-        /* Secciones */
         .section {
             margin: 40px 0;
             padding: 20px;
@@ -147,8 +138,6 @@
             text-align: center;
             margin-top: 10px;
         }
-
-        /* Post-boda */
         .gallery {
             display: flex;
             overflow-x: auto;
@@ -166,8 +155,6 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
-
-        /* Animaciones */
         .fade-in {
             animation: fadeIn 1s ease-in;
         }
@@ -184,38 +171,18 @@
             40% { transform: translateY(-10px); }
             60% { transform: translateY(-5px); }
         }
-
-        /* Ocultar secciones por defecto */
         .pre-boda, .post-boda {
             display: none;
         }
         .active {
             display: block;
         }
-
-        /* Botón flotante para alternar etapas (para pruebas) */
-        .toggle-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #D4AF37;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
-
-        /* Música de fondo */
         #bg-music {
             display: none;
         }
         .music-btn {
             position: fixed;
-            bottom: 80px;
+            bottom: 30px;
             right: 20px;
             background: #6B705C;
             color: white;
@@ -226,199 +193,203 @@
             cursor: pointer;
             box-shadow: 0 2px 10px rgba(0,0,0,0.3);
             z-index: 1000;
+            font-size: 1.2rem;
         }
-
-        /* Responsive */
+        .colores-img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .bank-info {
+            background: #f9f9f9;
+            border-left: 4px solid #D4AF37;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .bank-info p {
+            margin: 4px 0;
+        }
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .hero p {
-                font-size: 1.2rem;
-            }
-            .countdown {
-                font-size: 1.5rem;
-            }
-            .gallery img {
-                width: 150px;
-            }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.2rem; }
+            .countdown { font-size: 1.5rem; }
+            .gallery img { width: 150px; }
         }
     </style>
 </head>
 <body>
-    <body>
+
 <audio id="bg-music" loop preload="metadata">
     <source src="https://www.dropbox.com/scl/fi/l2dl15aoim6gxfl7ubi4b/Star-Wars-Epic-Main-Theme.mp3?rlkey=hijdud4wcadmnhkrcpix6ghqi&st=l0i4hmy5&dl=1" type="audio/mp3">
-    Tu navegador no soporta audio.
 </audio>
 <button class="music-btn" id="music-btn" onclick="toggleMusic()">♪</button>
 
-    <!-- Botón para alternar etapas (pre/post boda) -->
-    <button class="toggle-btn" onclick="toggleStage()">🔄</button>
+<!-- PRE-BODA -->
+<div id="pre-boda" class="pre-boda">
+    <div class="hero">
+        <h1>Made & Victor</h1>
+        <p>Nuestra Alianza en la Galaxia se forja el 23 de Enero del 2027</p>
+        <div class="countdown" id="countdown">Cargando conteo...</div>
+    </div>
+    <div class="container">
 
-    <div id="pre-boda" class="pre-boda">
-        <div class="hero">
-            <h1>Made & Victor</h1>
-            <p>Nuestra Alianza en la Galaxia se forja el 23 de Enero del 2027</p>
-            <div class="countdown" id="countdown">Cargando conteo...</div>
+        <div class="section fade-in">
+            <h2>Sobre Nosotros</h2>
+            <!-- COMPLETAR: Reemplaza este párrafo con la historia real de la pareja -->
+            <p>Aquí va nuestra historia. Cuéntennos cómo se conocieron, qué los une, y por qué este día es tan especial.</p>
         </div>
-        <div class="container">
-            <div class="section fade-in">
-                <h2>Datos Acerca de los Novios</h2>
-                <p>[Agrega aquí datos personales, e.g., "Juan tiene 30 años, es ingeniero y le encanta la música. María tiene 28 años, es diseñadora y adora viajar. Nos conocimos en la universidad en 2018 y desde entonces hemos construido una vida juntos llena de amor y aventuras."]</p>
-            </div>
-            <div class="section fade-in">
-                <h2>Detalles de la Boda</h2>
-                <div class="details">
-                    <div class="detail-item">
-                        <h3>Lugar de la Boda Eclesial</h3>
-                        <p>Iglesia San Francisco de Asis</p>
-                        <p>Casco Antiguo</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1008.7005956948504!2d-79.53351074651374!3d8.952954638301936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8cb466e3ba7%3A0x1b05fcf35e40f20c!2sIglesia%20San%20Francisco%20de%20As%C3%ADs!5e1!3m2!1ses!2spa!4v1777138727831!5m2!1ses!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="detail-item">
-                        <h3>Lugar de la Recepción</h3>
-                        <p>JW Marriott Panama, Piso 66</p>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2391.2666896004657!2d-79.50771228403234!3d8.974749983759075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9e9af914ec7%3A0xc9e2c9b5fb352715!2sJW%20Marriott%20Panama!5e1!3m2!1ses!2spa!4v1777138397073!5m2!1ses!2spa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="detail-item">
-                        <h3>Colores a Evitar</h3>
-                        <img src="img/21.jpg" alt="Colores a evitar" class="colores-img">
-                    </div>
+
+        <div class="section fade-in">
+            <h2>Detalles de la Boda</h2>
+            <div class="details">
+                <div class="detail-item">
+                    <h3>Ceremonia</h3>
+                    <p>Iglesia San Francisco de Asís</p>
+                    <p>Casco Antiguo</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1008.7005956948504!2d-79.53351074651374!3d8.952954638301936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca8cb466e3ba7%3A0x1b05fcf35e40f20c!2sIglesia%20San%20Francisco%20de%20As%C3%ADs!5e1!3m2!1ses!2spa!4v1777138727831!5m2!1ses!2spa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="detail-item">
+                    <h3>Recepción</h3>
+                    <p>JW Marriott Panama, Piso 66</p>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2391.2666896004657!2d-79.50771228403234!3d8.974749983759075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8faca9e9af914ec7%3A0xc9e2c9b5fb352715!2sJW%20Marriott%20Panama!5e1!3m2!1ses!2spa!4v1777138397073!5m2!1ses!2spa" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="detail-item">
+                    <h3>Colores a Evitar</h3>
+                    <img src="img/21.jpg" alt="Colores a evitar" class="colores-img">
                 </div>
             </div>
-            <div class="section fade-in">
-                <h2>Confirma tu Asistencia (RSVP)</h2>
-                <form id="rsvp-form" action="https://docs.google.com/forms/d/e/1FAIpQLScRTifwwICWaOC8WXIgZA__4SFRyPAFq-_tEkgUezZEgLnE3w/viewform?usp=publish-editor" method="POST" onsubmit="handleSubmit(event)">
-                    <input type="text" name="entry.123456789" placeholder="Tu Nombre" required>
-                    <input type="text" name="entry.987654321" placeholder="Tu Apellido" required>
-                    <input type="email" name="entry.112233445" placeholder="Tu Email" required>
-                    <input type="number" name="entry.556677889" placeholder="Número de Invitados (opcional)" min="1">
-                    <button type="submit">Confirmar Asistencia</button>
-                </form>
-                <div class="confirmation-message" id="confirmation">¡Gracias! Tu asistencia ha sido confirmada.</div>
-                <p>Nota: Reemplaza el action con tu Google Form real para RSVP. Asegúrate de que los "entry" IDs coincidan.</p>
-            </div>
-            <div class="section fade-in">
-                <h2>Regalos</h2>
-                <p>Si deseas regalarnos algo, puedes hacerlo vía transferencia bancaria a la cuenta del novio: [Banco, e.g., Banco Nacional, Cuenta: 123456789, Nombre: Juan Pérez]. ¡Tu presencia es el mejor regalo!</p>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Confirma tu Asistencia (RSVP)</h2>
+            <!-- COMPLETAR: Reemplaza el action con la URL real de tu Google Form (/formResponse) -->
+            <!-- y actualiza los entry.XXXXXXX con los IDs reales de cada campo -->
+            <form id="rsvp-form" onsubmit="handleSubmit(event)">
+                <input type="text" name="entry.123456789" placeholder="Tu Nombre" required>
+                <input type="text" name="entry.987654321" placeholder="Tu Apellido" required>
+                <input type="email" name="entry.112233445" placeholder="Tu Email" required>
+                <input type="number" name="entry.556677889" placeholder="Número de Invitados (opcional)" min="1">
+                <button type="submit">Confirmar Asistencia</button>
+            </form>
+            <div class="confirmation-message" id="confirmation">¡Gracias! Tu asistencia ha sido confirmada.</div>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Regalos</h2>
+            <p>Tu presencia es el mejor regalo. Si deseas obsequiarnos algo, puedes hacerlo vía transferencia bancaria:</p>
+            <!-- COMPLETAR: Reemplaza con los datos bancarios reales -->
+            <div class="bank-info">
+                <p><strong>Banco:</strong> Nombre del banco</p>
+                <p><strong>Cuenta:</strong> Número de cuenta</p>
+                <p><strong>Titular:</strong> Nombre del titular</p>
             </div>
         </div>
+
     </div>
+</div>
 
-    <div id="post-boda" class="post-boda">
-        <div class="hero">
-            <h1>CASTAFU WEDDING</h1>
-            <p>¡Nuestra Boda Fue Increíble! Gracias por ser parte.</p>
-        </div>
-        <div class="container">
-            <div class="section fade-in">
-                <h2>Galería de Recuerdos</h2>
-                <p>Invitados, suban fotos y videos aquí: <a href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank" rel="noopener noreferrer">Subir Archivos</a> (Usa Google Forms vinculado a Drive para carpetas: Ceremonia, Recepción, Fiesta).</p>
-                <div class="gallery" id="gallery">
-                    <img src="https://source.unsplash.com/featured/?wedding-ceremony" alt="Ceremonia">
-                    <img src="https://source.unsplash.com/featured/?wedding-reception" alt="Recepción">
-                    <img src="https://source.unsplash.com/featured/?wedding-dance" alt="Fiesta">
-                    <!-- Agrega más imágenes manualmente o integra con API -->
-                </div>
-            </div>
-            <div class="section fade-in">
-                <h2>Mensajes de Invitados</h2>
-                <form action="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID2/formResponse" method="POST">
-                    <input type="text" name="entry.123456789" placeholder="Tu Nombre" required>
-                    <textarea name="entry.987654321" placeholder="Tu Mensaje" required></textarea>
-                    <button type="submit">Enviar Mensaje</button>
-                </form>
-                <p>Nota: Reemplaza con tu Google Form para mensajes.</p>
-            </div>
-            <div class="section fade-in">
-                <h2>Agradecimientos</h2>
-                <p>Gracias a todos por acompañarnos en este día especial. ¡Los queremos mucho!</p>
-            </div>
-        </div>
+<!-- POST-BODA -->
+<div id="post-boda" class="post-boda">
+    <div class="hero">
+        <h1>CASTAFU WEDDING</h1>
+        <p>¡Nuestra Boda Fue Increíble! Gracias por ser parte.</p>
     </div>
+    <div class="container">
 
-    <script>
-        // Fecha de la boda (23 de enero de 2027 a las 6 PM)
-        const weddingDate = new Date("2027-01-23T18:00:00");
+        <div class="section fade-in">
+            <h2>Galería de Recuerdos</h2>
+            <!-- COMPLETAR: Reemplaza el href con el link real de tu Google Form para subir fotos -->
+            <p>Invitados, compartan sus fotos y videos aquí:
+                <a href="https://forms.gle/TU_LINK_REAL_AQUI" target="_blank" rel="noopener noreferrer">📷 Subir Fotos</a>
+            </p>
+            <div class="gallery" id="gallery">
+                <!-- COMPLETAR: Agrega aquí las fotos reales de la boda -->
+                <!-- Ejemplo: <img src="fotos/ceremonia1.jpg" alt="Ceremonia"> -->
+            </div>
+        </div>
 
-        // Función para actualizar conteo regresivo
-        function updateCountdown() {
-            const now = new Date();
-            const diff = weddingDate - now;
-            if (diff > 0) {
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-                document.getElementById('countdown').innerText = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+        <div class="section fade-in">
+            <h2>Mensajes de Invitados</h2>
+            <!-- COMPLETAR: Reemplaza el action con la URL real de tu Google Form de mensajes -->
+            <form action="https://docs.google.com/forms/d/e/TU_FORM_ID_AQUI/formResponse" method="POST" target="_blank">
+                <input type="text" name="entry.123456789" placeholder="Tu Nombre" required>
+                <textarea name="entry.987654321" placeholder="Tu Mensaje" required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+
+        <div class="section fade-in">
+            <h2>Agradecimientos</h2>
+            <p>Gracias a todos por acompañarnos en este día tan especial. ¡Los queremos mucho!</p>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const weddingDate = new Date("2027-01-23T18:00:00");
+
+    function updateCountdown() {
+        const now = new Date();
+        const diff = weddingDate - now;
+        if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            document.getElementById('countdown').innerText =
+                `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+        } else {
+            document.getElementById('countdown').innerText = "¡El día llegó!";
+        }
+    }
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const confirmation = document.getElementById('confirmation');
+        confirmation.style.display = 'block';
+        setTimeout(() => { confirmation.style.display = 'none'; }, 3000);
+        // COMPLETAR: Para enviar datos reales, conecta el form action a tu Google Form
+        // y elimina el event.preventDefault() de arriba
+    }
+
+    function toggleMusic() {
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('music-btn');
+        try {
+            if (music.paused) {
+                music.play().then(() => {
+                    btn.innerText = '⏸';
+                }).catch(error => {
+                    console.error('Error al reproducir audio:', error);
+                });
             } else {
-                document.getElementById('countdown').innerText = "¡El día llegó!";
+                music.pause();
+                btn.innerText = '♪';
             }
+        } catch (e) {
+            console.error('Error con el audio:', e);
         }
+    }
 
-        // Función para manejar el envío del formulario RSVP
-        function handleSubmit(event) {
-            event.preventDefault(); // Evita el envío real para simular confirmación
-            const confirmation = document.getElementById('confirmation');
-            confirmation.style.display = 'block';
-            setTimeout(() => {
-                confirmation.style.display = 'none';
-            }, 3000); // Oculta el mensaje después de 3 segundos
-            // Aquí podrías agregar lógica para enviar datos a Google Forms si es necesario
+    function checkStage() {
+        const now = new Date();
+        const preBoda = document.getElementById('pre-boda');
+        const postBoda = document.getElementById('post-boda');
+        if (now >= weddingDate) {
+            preBoda.classList.remove('active');
+            postBoda.classList.add('active');
+        } else {
+            preBoda.classList.add('active');
+            postBoda.classList.remove('active');
+            updateCountdown();
         }
+    }
 
-        // Función para alternar entre pre-boda y post-boda (para pruebas)
-        function toggleStage() {
-            const preBoda = document.getElementById('pre-boda');
-            const postBoda = document.getElementById('post-boda');
-            if (preBoda.classList.contains('active')) {
-                preBoda.classList.remove('active');
-                postBoda.classList.add('active');
-            } else {
-                postBoda.classList.remove('active');
-                preBoda.classList.add('active');
-            }
-        }
-
-        // Función para alternar música de fondo
-        function toggleMusic() {
-            const music = document.getElementById('bg-music');
-            const btn = document.getElementById('music-btn');
-            try {
-                if (music.paused) {
-                    music.play().then(() => {
-                        btn.innerText = '⏸'; // Cambia a pausa
-                    }).catch(error => {
-                        console.error('Error al reproducir audio:', error);
-                        alert('No se pudo reproducir la música. Verifica la URL o intenta en un servidor.');
-                    });
-                } else {
-                    music.pause();
-                    btn.innerText = '♪'; // Cambia a play
-                }
-            } catch (e) {
-                console.error('Error con el audio:', e);
-            }
-        }
-
-        // Cambio automático de etapa
-        function checkStage() {
-            const now = new Date();
-            if (now >= weddingDate) {
-                document.getElementById('pre-boda').classList.remove('active');
-                document.getElementById('post-boda').classList.add('active');
-            } else {
-                document.getElementById('pre-boda').classList.add('active');
-                document.getElementById('post-boda').classList.remove('active');
-                updateCountdown();
-            }
-        }
-
-        // Inicializar
-        checkStage();
-        setInterval(checkStage, 1000); // Verificar cada segundo para countdown en vivo
-    </script>
-    <script src="script.js"></script>
+    checkStage();
+    setInterval(checkStage, 1000);
+</script>
+<script src="script.js"></script>
 </body>
 </html>
