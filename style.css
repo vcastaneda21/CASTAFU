@@ -173,6 +173,28 @@ button:hover {
     margin-top: 10px;
 }
 
+.copy-btn {
+    display: inline;
+    width: auto;
+    padding: 3px 10px;
+    margin: 0 0 0 8px;
+    font-size: 0.75rem;
+    background: #D4AF37;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    vertical-align: middle;
+}
+.copy-btn:hover {
+    background: #b8942e;
+}
+.copy-btn.copied {
+    background: #6B705C;
+}
+
+
 /* Post-boda */
 .gallery {
     display: flex;
