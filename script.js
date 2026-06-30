@@ -100,3 +100,18 @@ function checkStage() {
 // Inicializar
 checkStage();
 setInterval(checkStage, 1000);
+
+function copyAccountNumber() {
+    const number = document.getElementById('account-number').innerText;
+    navigator.clipboard.writeText(number).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.innerText = '¡Copiado!';
+        btn.classList.add('copied');
+        setTimeout(() => {
+            btn.innerText = 'Copiar';
+            btn.classList.remove('copied');
+        }, 2000);
+    }).catch(() => {
+        alert('No se pudo copiar. Por favor cópialo manualmente.');
+    });
+}
