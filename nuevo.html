@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Madeleine &amp; Victor · Nuestra Boda</title>
+<meta name="description" content="Nuestra alianza en la galaxia se forja el 23 de enero del 2027. Madeleine & Victor te invitan a su boda.">
+<meta property="og:title" content="Madeleine & Victor · Nuestra Boda">
+<meta property="og:description" content="Nuestra alianza en la galaxia se forja el 23 de enero del 2027.">
+<meta property="og:image" content="assets/foto.jpg">
+<meta name="theme-color" content="#2b2b2b">
+
+<style>
+/* ---------- Tipografías (locales, sin depender de Google Fonts) ---------- */
+@font-face{font-family:"Cinzel Decorative";font-weight:400;font-display:swap;src:url(assets/fonts/cinzel-decorative-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Cinzel Decorative";font-weight:700;font-display:swap;src:url(assets/fonts/cinzel-decorative-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:300;font-style:normal;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:400;font-style:normal;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:300;font-style:italic;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-300-italic.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:400;font-style:italic;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:500;font-style:italic;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-500-italic.woff2) format("woff2")}
+@font-face{font-family:"IBM Plex Sans";font-weight:700;font-style:italic;font-display:swap;src:url(assets/fonts/ibm-plex-sans-latin-700-italic.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:300;font-display:swap;src:url(assets/fonts/montserrat-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:400;font-display:swap;src:url(assets/fonts/montserrat-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Montserrat";font-weight:500;font-display:swap;src:url(assets/fonts/montserrat-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Bebas Neue";font-weight:400;font-display:swap;src:url(assets/fonts/bebas-neue-latin-400-normal.woff2) format("woff2")}
+
+/* ---------- Base ---------- */
+:root{
+  --ink:#1c1c1c;
+  --line:#3b3b3b;
+  --display:"Cinzel Decorative","Cinzel",Georgia,serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --spaced:"Montserrat","IBM Plex Sans",system-ui,sans-serif;
+  --count:"Bebas Neue","Oswald",Impact,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--body);
+  color:var(--ink);
+  background:#eae0cf url(assets/seda.jpg) top center / 100% auto repeat-y;
+  line-height:1.45;
+  overflow-x:hidden;
+}
+.page{max-width:800px;margin:0 auto;padding-bottom:34px}
+a{color:inherit;text-decoration:none}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- Portada ---------- */
+.hero{
+  position:relative;height:260px;color:#fff;text-align:center;
+  background:
+    linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.05) 45%,rgba(0,0,0,.12)),
+    url(assets/foto.jpg) center 54% / cover no-repeat;
+  filter:none;
+}
+.hero img.mono{position:absolute;left:50%;top:18px;transform:translateX(-50%);width:112px;height:auto}
+.hero .names{
+  position:absolute;left:0;right:0;top:142px;
+  font-family:var(--display);font-weight:400;font-size:21px;letter-spacing:.07em;
+  text-shadow:0 1px 4px rgba(0,0,0,.35);
+}
+
+/* ---------- Cuenta regresiva ---------- */
+.countdown{
+  position:relative;z-index:2;margin:-33px auto 0;width:max-content;max-width:100%;
+  display:flex;align-items:flex-start;justify-content:center;gap:clamp(3px,1.05vw,8px);
+  --w:clamp(25px,4vw,32px);
+}
+.cd-group{display:flex;flex-direction:column;align-items:center}
+.cd-tiles{display:flex;gap:3px}
+.tile{
+  width:var(--w);height:calc(var(--w) * 1.7);
+  display:grid;place-items:center;position:relative;
+  font-family:var(--count);font-size:calc(var(--w) * 1.5);line-height:1;color:#fff;
+  background:linear-gradient(#2b2b2b 0 50%,#161616 50% 100%);
+  border:2px solid #efeae0;border-radius:2px;
+  box-shadow:0 2px 5px rgba(0,0,0,.45);
+  padding-top:2px;
+}
+.tile::after{ /* bisagra del flip */
+  content:"";position:absolute;left:0;right:0;top:50%;height:1px;
+  background:rgba(0,0,0,.85);box-shadow:0 1px 0 rgba(255,255,255,.12);
+}
+.cd-label{
+  margin-top:6px;font-family:var(--count);font-size:12px;letter-spacing:.03em;color:#2a2a2a;
+}
+.cd-sep{
+  align-self:flex-start;height:calc(var(--w) * 1.7);
+  display:flex;flex-direction:column;justify-content:center;gap:9px;
+}
+.cd-sep i{display:block;width:4px;height:4px;border-radius:50%;background:#2a2a2a}
+
+/* ---------- Textos de apertura ---------- */
+.intro{padding:0 36px;margin-top:6px}
+.date-line{
+  text-align:center;font-size:15.5px;letter-spacing:.005em;color:#161616;text-transform:uppercase;
+}
+.lead{text-align:center;font-style:italic;font-weight:700;font-size:14.5px;margin-top:14px}
+.intro p.copy{
+  font-style:italic;font-weight:400;font-size:14.5px;line-height:1.35;
+  text-align:justify;text-align-last:left;margin-top:22px;color:#1a1a1a;
+}
+.intro p.lead + p.copy{margin-top:20px}
+
+/* ---------- Títulos de sección ---------- */
+h2{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(23px,4.5vw,31px);letter-spacing:.075em;text-align:center;color:#171717;line-height:1.2;
+}
+h2 .i{font-size:1.3em;letter-spacing:.04em;line-height:0}
+
+/* ---------- Detalles de la boda ---------- */
+.details{margin-top:54px}
+.boxes{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(10px,4.9%,39px);
+  padding:0 clamp(14px,3.75%,30px);margin-top:10px;
+}
+.box{
+  aspect-ratio:222/212;border:1px solid var(--line);
+  display:grid;place-items:center;text-align:center;
+  font-family:var(--spaced);font-weight:400;font-size:clamp(11px,2.1vw,16px);letter-spacing:.02em;
+  text-transform:uppercase;color:#1c1c1c;transition:background .25s;
+}
+a.box:hover,a.box:focus-visible{background:rgba(255,255,255,.35)}
+.box.color span{transform:translateY(11px)}
+
+/* ---------- Itinerario ---------- */
+.itinerary{margin-top:42px}
+.timeline{width:min(560px,100%);margin:6px auto 0;padding:0 8px}
+.icons,.cols{display:grid;grid-template-columns:repeat(3,1fr)}
+.icons{justify-items:center}
+.icons svg{width:56px;height:56px;stroke:#242424;fill:none;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.rule{height:2px;background:#0d0d0d;width:min(522px,94%);margin:0 auto}
+.cols{margin-top:16px;text-align:center;font-family:var(--spaced);color:#222}
+.cols .time{font-weight:400;font-size:clamp(12px,2vw,15px);letter-spacing:.16em}
+.cols .what{font-weight:400;font-size:clamp(13px,2.2vw,17px);letter-spacing:.2em;margin-top:12px}
+.cols .where{font-weight:400;font-size:clamp(10px,1.65vw,12.5px);letter-spacing:.13em;line-height:1.35;margin:9px auto 0;max-width:150px;text-transform:uppercase}
+
+/* ---------- JW Marriott ---------- */
+.venue{
+  margin:75px auto 0;padding:0 20px;display:flex;align-items:center;justify-content:center;
+  gap:clamp(14px,3.8vw,30px);flex-wrap:nowrap;
+}
+.venue img{width:clamp(104px,21vw,170px);height:auto;flex:none}
+.venue ul{list-style:none;font-family:var(--spaced);font-weight:400;font-size:clamp(11px,2.05vw,16.5px);letter-spacing:.11em;line-height:1.85;color:#1d1d1d}
+
+/* ---------- Mensaje adultos ---------- */
+.adults{padding:0 36px;margin-top:58px;text-align:center;font-size:clamp(14px,1.8vw,14.4px);line-height:1.55;color:#141414}
+.adults strong{font-weight:700}
+.adults .gap{margin-top:1.6em}
+
+/* ---------- Confirmar asistencia ---------- */
+.rsvp{margin-top:48px}
+.rsvp-row{display:flex;justify-content:center;align-items:stretch;gap:15px;margin:14px auto 0;padding:0 20px;max-width:720px}
+.qr{flex:none;width:clamp(120px,23vw,186px);background:#fff;display:block;line-height:0}
+.qr img{width:100%;height:auto;display:block}
+.rsvp-box{
+  flex:0 1 388px;border:1px solid var(--line);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;font-family:var(--spaced);font-size:clamp(10px,1.85vw,14.5px);letter-spacing:.17em;line-height:1.9;
+  padding:14px 10px;transition:background .25s;
+}
+.rsvp-box b{font-weight:700}
+a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
+
+/* ---------- Mesa de regalos ---------- */
+.gifts{margin-top:56px}
+.gift-box{
+  width:min(460px,calc(100% - 40px));margin:12px auto 0;border:1px solid var(--line);
+  text-align:center;padding:26px 16px 18px;font-family:var(--spaced);
+}
+.gift-box .big{font-weight:400;font-size:clamp(13px,2.2vw,17px);letter-spacing:.24em;color:#1c1c1c}
+.gift-box .big + .big{margin-top:26px;font-size:clamp(14px,2.4vw,19px)}
+.gift-box .acct{font-family:var(--body);font-style:italic;font-weight:300;font-size:clamp(13px,2.1vw,16px);line-height:1.45;color:#3a3a3a;margin-top:2px}
+
+@media (max-width:520px){
+  .hero .names{font-size:18px;top:138px}
+  .hero img.mono{width:96px;top:16px}
+  .intro,.adults{padding:0 22px}
+  .intro p.copy{text-align:left}
+  .venue{flex-direction:column;gap:14px;padding:0 14px;margin-top:60px}
+  .venue img{width:150px}
+  .venue ul{letter-spacing:.06em;text-align:center;font-size:11.5px;line-height:1.9}
+  .rsvp-row{gap:10px;padding:0 14px}
+  .rsvp-box{letter-spacing:.09em;font-size:9.5px;padding:14px 6px}
+  .cols .where{letter-spacing:.07em}
+  .cols .what{letter-spacing:.1em}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+
+<body>
+<main class="page">
+
+  <!-- PORTADA -->
+  <header class="hero">
+    <img class="mono" src="assets/monograma.png" alt="Monograma M y V">
+    <h1 class="names">Madeleine &amp; Victor</h1>
+  </header>
+
+  <!-- CUENTA REGRESIVA -->
+  <section class="countdown" id="countdown" role="timer" aria-label="Cuenta regresiva para la boda">
+    <div class="cd-group"><div class="cd-tiles" data-unit="days"><div class="tile">0</div><div class="tile">0</div><div class="tile">0</div></div><div class="cd-label">DAYS</div></div>
+    <div class="cd-sep" aria-hidden="true"><i></i><i></i></div>
+    <div class="cd-group"><div class="cd-tiles" data-unit="hours"><div class="tile">0</div><div class="tile">0</div></div><div class="cd-label">HRS</div></div>
+    <div class="cd-sep" aria-hidden="true"><i></i><i></i></div>
+    <div class="cd-group"><div class="cd-tiles" data-unit="mins"><div class="tile">0</div><div class="tile">0</div></div><div class="cd-label">MINS</div></div>
+    <div class="cd-sep" aria-hidden="true"><i></i><i></i></div>
+    <div class="cd-group"><div class="cd-tiles" data-unit="secs"><div class="tile">0</div><div class="tile">0</div></div><div class="cd-label">SECS</div></div>
+  </section>
+
+  <!-- INTRODUCCIÓN -->
+  <section class="intro">
+    <p class="date-line">Nuestra alianza en la galaxia se forja el 23 de enero del 2027</p>
+    <p class="lead">!Nos llena de alegría compartir con ustedes el amor que nos ha unido.!</p>
+    <p class="copy">Hoy damos un paso más en nuestra historia: unir nuestras vidas y nuestros corazones ante Dios, poniendo nuestro amor bajo su guía y bendición.</p>
+    <p class="copy">Queremos comenzar este nuevo capítulo rodeados de quienes amamos y compartir con ustedes la alegría de convertir nuestro amor en una promesa para toda la vida.</p>
+  </section>
+
+  <!-- DETALLES DE LA BODA -->
+  <section class="details">
+    <h2><span class="i">D</span>etalles de la <span class="i">B</span>oda</h2>
+    <div class="boxes">
+      <a class="box" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Francisco+de+As%C3%ADs+Casco+Antiguo+Panam%C3%A1" target="_blank" rel="noopener"><span>Ubicacion</span></a>
+      <a class="box" href="https://www.google.com/maps/search/?api=1&query=JW+Marriott+Panama" target="_blank" rel="noopener"><span>Ubicacion</span></a>
+      <div class="box color"><span>Color</span></div>
+    </div>
+  </section>
+
+  <!-- ITINERARIO -->
+  <section class="itinerary">
+    <h2><span class="i">I</span>tinerario</h2>
+    <div class="timeline">
+      <div class="icons" aria-hidden="true">
+        <!-- iglesia -->
+        <svg viewBox="0 0 48 48"><path d="M24 3v8M21 6h6"/><path d="M24 12l-6 9v19h12V21z"/><path d="M8 40V31l10-5M40 40V31l-10-5"/><path d="M4 40h40"/><path d="M21 40v-5a3 3 0 0 1 6 0v5"/><path d="M12 36v-2a1.5 1.5 0 0 1 3 0v2M33 36v-2a1.5 1.5 0 0 1 3 0v2"/></svg>
+        <!-- anillos -->
+        <svg viewBox="0 0 48 48"><circle cx="15.5" cy="29" r="11"/><circle cx="15.5" cy="29" r="8"/><circle cx="32.5" cy="29" r="11"/><circle cx="32.5" cy="29" r="8"/><path d="M24 15c-4.5-3.2-4.5-8 -1.4-8 .9 0 1.4.7 1.4 1.5 0-.8.5-1.5 1.4-1.5 3.100 0 3.100 4.800-1.400 8z"/></svg>
+        <!-- copas -->
+        <svg viewBox="0 0 48 48"><g transform="translate(17 27) rotate(-18)"><path d="M-5-14h10l-1.500 11a3.500 3.500 0 0 1-7 0z"/><path d="M0 1v13M-4.500 14h9"/></g><g transform="translate(31 27) rotate(18)"><path d="M-5-14h10l-1.500 11a3.500 3.500 0 0 1-7 0z"/><path d="M0 1v13M-4.500 14h9"/></g><path d="M24 4v5M21.500 6.500h5M14 8l2 2M34 8l-2 2"/></svg>
+      </div>
+      <div class="rule"></div>
+      <div class="cols">
+        <div><div class="time">5:45 PM</div><div class="what">IGLESIA</div><div class="where">San Francisco de Asis - Casco Antiguo</div></div>
+        <div><div class="time">8:00 PM</div><div class="what">RECEPCIÓN</div><div class="where">JW Marriot<br>Salon Panaviera</div></div>
+        <div><div class="time">10:00 PM</div><div class="what">FIESTA</div><div class="where">JW Marriot<br>Salon Panaviera</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JW MARRIOTT -->
+  <section class="venue">
+    <img src="assets/jw-marriott.png" alt="JW Marriott">
+    <ul>
+      <li>ESTACIONAMIENTO GRATIS - PISO 6</li>
+      <li>LLEGADA EN INDRIVE O URBER - PISO 14</li>
+    </ul>
+  </section>
+
+  <!-- SOLO ADULTOS -->
+  <section class="adults">
+    <p>Queremos que disfrutes de cada momento con total libertad. Por ello, <strong>nuestra celebración será exclusivamente para adultos</strong>. Agradecemos de corazón tu comprensión y cariño al respetar el descanso y la rutina de los más pequeños.</p>
+    <p class="gap">¡Esperamos compartir contigo una velada llena de amor, alegría y buenos recuerdos!</p>
+  </section>
+
+  <!-- CONFIRMAR ASISTENCIA -->
+  <section class="rsvp">
+    <h2><span class="i">C</span>onfirmar <span class="i">A</span>sistencia</h2>
+    <div class="rsvp-row">
+      <a class="qr" href="https://docs.google.com/forms/d/e/1FAIpQLScRTifwwICWaOC8WXIgZA__4SFRyPAFq-_tEkgUezZEgLnE3w/viewform?usp=header" target="_blank" rel="noopener" aria-label="Abrir formulario de confirmación de asistencia">
+        <img src="assets/qr-confirmar.svg" alt="Código QR para confirmar asistencia">
+      </a>
+      <a class="rsvp-box" href="https://docs.google.com/forms/d/e/1FAIpQLScRTifwwICWaOC8WXIgZA__4SFRyPAFq-_tEkgUezZEgLnE3w/viewform?usp=header" target="_blank" rel="noopener">
+        <span>FAVOR DE CONFIRMAR ANTES DEL</span>
+        <b>01 DE OCTUBRE DE 2026</b>
+      </a>
+    </div>
+  </section>
+
+  <!-- MESA DE REGALOS -->
+  <section class="gifts">
+    <h2><span class="i">M</span>esa de <span class="i">R</span>egalos</h2>
+    <div class="gift-box">
+      <p class="big">LLUVIA DE SOBRES</p>
+      <p class="big">TRANSFERENCIA</p>
+      <p class="acct">CastaFu</p>
+      <p class="acct">#04-72-97565927-7</p>
+      <p class="acct">Banco General</p>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function(){
+  // 23 de enero de 2027, 5:45 PM (hora de Panamá, UTC-5) — inicio de la ceremonia
+  var target = new Date("2027-01-23T17:45:00-05:00").getTime();
+  var el = document.getElementById("countdown");
+  var groups = {
+    days:  el.querySelector('[data-unit="days"]'),
+    hours: el.querySelector('[data-unit="hours"]'),
+    mins:  el.querySelector('[data-unit="mins"]'),
+    secs:  el.querySelector('[data-unit="secs"]')
+  };
+  function pad(n, len){ n = String(n); while(n.length < len) n = "0" + n; return n; }
+  function paint(group, value, len){
+    var s = pad(value, len), tiles = group.children;
+    for (var i = 0; i < tiles.length; i++) tiles[i].textContent = s.charAt(i);
+  }
+  function tick(){
+    var diff = Math.max(0, target - Date.now());
+    var total = Math.floor(diff / 1000);
+    var d = Math.floor(total / 86400),
+        h = Math.floor((total % 86400) / 3600),
+        m = Math.floor((total % 3600) / 60),
+        s = total % 60;
+    paint(groups.days, d, 3);
+    paint(groups.hours, h, 2);
+    paint(groups.mins, m, 2);
+    paint(groups.secs, s, 2);
+    if (s === 0) el.setAttribute("aria-label", "Faltan " + d + " días, " + h + " horas y " + m + " minutos para la boda");
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
