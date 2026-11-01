@@ -126,8 +126,9 @@ h2 .i{font-size:1.3em;letter-spacing:.04em;line-height:0}
   text-transform:uppercase;color:#1c1c1c;transition:background .25s;
 }
 a.box:hover,a.box:focus-visible{background:rgba(255,255,255,.35)}
-.box.color span{transform:translateY(11px)}
-
+.box.color{grid-template-rows:auto 1fr;gap:10px;padding:14px 10px}
+.box.color span{transform:none;font-size:clamp(10px,1.7vw,13px);letter-spacing:.08em}
+.box.color img{width:100%;height:100%;min-height:0;object-fit:contain}
 /* ---------- Itinerario ---------- */
 .itinerary{margin-top:42px}
 .timeline{width:min(560px,100%);margin:6px auto 0;padding:0 8px}
@@ -227,7 +228,7 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
     <div class="boxes">
       <a class="box" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Francisco+de+As%C3%ADs+Casco+Antiguo+Panam%C3%A1" target="_blank" rel="noopener"><span>Iglesia San Francisco de Asís<br><br>Ver ubicación</span></a>
       <a class="box" href="https://www.google.com/maps/search/?api=1&query=JW+Marriott+Panama" target="_blank" rel="noopener"><span>JW Marriott Panamá<br><br>Ver ubicación</span></a>
-      <div class="box color"><span>Color</span></div>
+      <div class="box color"><span>Colores a evitar</span><img src="img/21.jpg" alt="Paleta de colores a evitar"></div>
     </div>
   </section>
 
