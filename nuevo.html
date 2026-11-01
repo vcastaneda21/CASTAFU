@@ -134,6 +134,9 @@ a.box:hover,a.box:focus-visible{background:rgba(255,255,255,.35)}
 .pal i{display:block;aspect-ratio:2.5/1;border-radius:999px;background:var(--c);border:1px solid rgba(40,30,10,.28);box-shadow:0 1px 3px rgba(0,0,0,.14)}
 .dress{text-align:center;margin-top:26px;font-family:var(--spaced);font-size:clamp(12px,2.1vw,16px);letter-spacing:.2em;color:#1c1c1c}
 .dress b{font-weight:500}
+.verse{max-width:460px;margin:40px auto 0;padding:0 36px;text-align:center;font-style:italic;font-size:15px;line-height:1.5;color:#1a1a1a}
+.verse b{font-weight:700}
+.verse cite{display:block;margin-top:10px;font-family:var(--spaced);font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase}
 /* ---------- Fotos ---------- */
 .photos{display:grid;gap:clamp(10px,4.9%,39px);margin:54px auto 0;padding:0 clamp(14px,3.75%,30px)}
 .photos.duo{grid-template-columns:1fr 1fr;max-width:640px}
@@ -178,7 +181,7 @@ a.box:hover,a.box:focus-visible{background:rgba(255,255,255,.35)}
 .rsvp-box b{font-weight:700}
 a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
 
-/* ---------- Mesa de regalos ---------- */
+/* ---------- regalos ---------- */
 .gifts{margin-top:56px}
 .gift-box{
   width:min(460px,calc(100% - 40px));margin:12px auto 0;border:1px solid var(--line);
@@ -236,6 +239,11 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
   <section class="photos solo">
     <figure><img src="assets/foto-retrato.jpg" alt="Madeleine y Victor abrazados" loading="lazy"></figure>
   </section>
+  <!-- VERSÍCULO -->
+  <blockquote class="verse">
+    <p><b>Yo IRÉ</b> a donde tú vayas, y <b>VIVIRÉ</b> donde tú vivas.<br>Tu pueblo será mi pueblo y tu Dios será mi Dios.</p>
+    <cite>Rut 1:16</cite>
+  </blockquote>
   <!-- DETALLES DE LA BODA -->
   <section class="details">
     <h2><span class="i">D</span>etalles de la <span class="i">B</span>oda</h2>
@@ -308,7 +316,7 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
   <section class="gifts">
     <h2><span class="i">M</span>esa de <span class="i">R</span>egalos</h2>
     <div class="gift-box">
-      <p class="big">LLUVIA DE SOBRES</p>
+      <p class="big">SOBRES</p>
       <p class="big">TRANSFERENCIA</p>
       <p class="acct">CastaFu</p>
       <p class="acct">#04-72-97565927-7</p>
