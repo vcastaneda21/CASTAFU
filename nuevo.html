@@ -132,6 +132,12 @@ a.box:hover,a.box:focus-visible{background:rgba(255,255,255,.35)}
 .pal li{display:grid;grid-template-columns:34% 1fr;align-items:center;gap:3cqw}
 .pal span{font-family:var(--body);font-style:italic;font-weight:400;font-size:clamp(9px,6.2cqw,14px);color:#5f5a4e;text-align:center}
 .pal i{display:block;aspect-ratio:2.5/1;border-radius:999px;background:var(--c);border:1px solid rgba(40,30,10,.28);box-shadow:0 1px 3px rgba(0,0,0,.14)}
+/* ---------- Fotos ---------- */
+.photos{display:grid;gap:clamp(10px,4.9%,39px);margin:54px auto 0;padding:0 clamp(14px,3.75%,30px)}
+.photos.duo{grid-template-columns:1fr 1fr;max-width:640px}
+.photos.solo{grid-template-columns:1fr;max-width:420px;margin-top:64px}
+.photos figure{border:1px solid var(--line);padding:6px}
+.photos img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 /* ---------- Itinerario ---------- */
 .itinerary{margin-top:42px}
 .timeline{width:min(560px,100%);margin:6px auto 0;padding:0 8px}
@@ -224,7 +230,11 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
     <p class="copy">Hoy damos un paso más en nuestra historia: unir nuestras vidas y nuestros corazones ante Dios, poniendo nuestro amor bajo su guía y bendición.</p>
     <p class="copy">Queremos comenzar este nuevo capítulo rodeados de quienes amamos y compartir con ustedes la alegría de convertir nuestro amor en una promesa para toda la vida.</p>
   </section>
-
+    <!-- FOTOS -->
+  <section class="photos duo">
+    <figure><img src="assets/foto-retrato.jpg" alt="Madeleine y Victor abrazados" loading="lazy"></figure>
+    <figure><img src="assets/foto-detalle.jpg" alt="Madeleine y Victor, detalle del anillo" loading="lazy"></figure>
+  </section>
   <!-- DETALLES DE LA BODA -->
   <section class="details">
     <h2><span class="i">D</span>etalles de la <span class="i">B</span>oda</h2>
@@ -271,7 +281,10 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
       <li>LLEGADA EN INDRIVE O URBER - PISO 14</li>
     </ul>
   </section>
-
+    <!-- FOTO -->
+  <section class="photos solo">
+    <figure><img src="assets/foto-paseo.jpg" alt="Madeleine y Victor paseando con su perrito" loading="lazy"></figure>
+  </section>
   <!-- SOLO ADULTOS -->
   <section class="adults">
     <p>Queremos que disfrutes de cada momento con total libertad. Por ello, <strong>nuestra celebración será exclusivamente para adultos</strong>. Agradecemos de corazón tu comprensión y cariño al respetar el descanso y la rutina de los más pequeños.</p>
