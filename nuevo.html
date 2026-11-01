@@ -126,8 +126,12 @@ h2 .i{font-size:1.3em;letter-spacing:.04em;line-height:0}
   text-transform:uppercase;color:#1c1c1c;transition:background .25s;
 }
 a.box:hover,a.box:focus-visible{background:rgba(255,255,255,.35)}
-.box.color{position:relative;overflow:hidden;padding:0}
-.box.color img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.box.color{container-type:inline-size;display:flex;flex-direction:column;justify-content:center;align-items:stretch;padding:5% 6%;text-transform:none}
+.pal-title{font-family:var(--spaced);text-transform:uppercase;text-align:center;font-size:clamp(7.5px,5.2cqw,12.5px);letter-spacing:.08em;line-height:1.3;color:#1c1c1c;margin-bottom:6cqw}
+.pal{list-style:none;display:flex;flex-direction:column;gap:3.6cqw}
+.pal li{display:grid;grid-template-columns:34% 1fr;align-items:center;gap:3cqw}
+.pal span{font-family:var(--body);font-style:italic;font-weight:400;font-size:clamp(9px,6.2cqw,14px);color:#5f5a4e;text-align:center}
+.pal i{display:block;aspect-ratio:2.5/1;border-radius:999px;background:var(--c);border:1px solid rgba(40,30,10,.28);box-shadow:0 1px 3px rgba(0,0,0,.14)}
 /* ---------- Itinerario ---------- */
 .itinerary{margin-top:42px}
 .timeline{width:min(560px,100%);margin:6px auto 0;padding:0 8px}
@@ -223,7 +227,14 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
 
   <!-- DETALLES DE LA BODA -->
   <section class="details">
-    <h2><span class="i">D</span>etalles de la <span class="i">B</span>oda</h2>
+    <div class="box color">
+        <p class="pal-title">Colores a evitar</p>
+        <ul class="pal">
+          <li><span>Crema</span><i style="--c:#f6f4db"></i></li>
+          <li><span>Azul</span><i style="--c:#253c5e"></i></li>
+          <li><span>Verde</span><i style="--c:#295149"></i></li>
+        </ul>
+      </div>
     <div class="boxes">
       <a class="box" href="https://www.google.com/maps/search/?api=1&query=Iglesia+San+Francisco+de+As%C3%ADs+Casco+Antiguo+Panam%C3%A1" target="_blank" rel="noopener"><span>Iglesia San Francisco de Asís<br><br>Ver ubicación</span></a>
       <a class="box" href="https://www.google.com/maps/search/?api=1&query=JW+Marriott+Panama" target="_blank" rel="noopener"><span>JW Marriott Panamá<br><br>Ver ubicación</span></a>
