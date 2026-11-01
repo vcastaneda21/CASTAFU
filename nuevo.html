@@ -191,10 +191,7 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
 .gift-box .big + .big{margin-top:26px;font-size:clamp(14px,2.4vw,19px)}
 .gift-box .acct{font-family:var(--body);font-style:italic;font-weight:300;font-size:clamp(13px,2.1vw,16px);line-height:1.45;color:#3a3a3a;margin-top:2px}
 /* ---------- Música ---------- */
-.music{text-align:center;margin-top:34px}
-.music a{display:inline-flex;align-items:center;gap:12px;border:1px solid var(--line);padding:14px 22px;font-family:var(--spaced);font-size:clamp(11px,2vw,14px);letter-spacing:.14em;text-transform:uppercase;color:#1c1c1c;transition:background .25s}
-.music a:hover,.music a:focus-visible{background:rgba(255,255,255,.35)}
-.music svg{width:22px;height:22px;stroke:#242424;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.music{max-width:420px;margin:34px auto 0;padding:0 clamp(14px,3.75%,30px)}
   
 @media (max-width:520px){
   .hero .names{font-size:18px;top:138px}
@@ -242,11 +239,8 @@ a.rsvp-box:hover,a.rsvp-box:focus-visible{background:rgba(255,255,255,.35)}
   </section>
   
   <!-- MÚSICA -->
-  <section class="music">
-    <a href="https://open.spotify.com/intl-es/track/3tDHLetbzL93bPqAXe4CoT?si=9437648b30ca4b65" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg>
-      <span>Nuestra playlist en Spotify</span>
-    </a>
+    <section class="music">
+    <iframe src="https://open.spotify.com/embed/track/3tDHLetbzL93bPqAXe4CoT" width="100%" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Nuestra canción"></iframe>
   </section>
   
      <!-- FOTO -->
